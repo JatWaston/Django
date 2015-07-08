@@ -6,6 +6,12 @@
     </head>
     <body>
         <p>知乎日报</p>
+        <label for="dateTime">日期选择：</label>
+        <form action="/daily/select/" name="date-select" method="get">
+            <input id="dateTime" type="date" value="{{ date_value }}" name="time"/>
+            <input type="submit" value="查找">
+        </form>
+
         <ul>
             {% for item in item_list %}
                 <li><a href="{{ item.link }}">{{ item.title }}</a> </li>
